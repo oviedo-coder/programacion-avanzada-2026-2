@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instalación del entorno — Programación Avanzada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #fafaf7;
+    --cell-bg: #ffffff;
+    --border: #e4e2da;
+    --text: #2b2b28;
+    --text-muted: #6b6a63;
+    --blue: #3b6fa0;
+    --blue-bg: #eef4fa;
+    --amber: #c98a2b;
+    --amber-bg: #fbf2e2;
+    --green: #3f8f5f;
+    --green-bg: #eaf6ef;
+    --code-bg: #2b2b28;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    line-height:1.65;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:56px 24px 100px;}
+  a{color:var(--blue);}
+  code{font-family:'JetBrains Mono', monospace; background:var(--blue-bg); padding:2px 6px; border-radius:4px; font-size:0.92em;}
+  .badge{
+    display:inline-block;
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    color:var(--text-muted);
+    background:var(--cell-bg);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:5px 14px;
+    margin-bottom:20px;
+  }
+  h1{font-size:32px; font-weight:700; margin:0 0 6px; line-height:1.2;}
+  .subtitle{color:var(--text-muted); font-size:16px; margin-bottom:36px;}
+  .toc{
+    background:var(--cell-bg);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:20px 24px;
+    margin-bottom:40px;
+  }
+  .toc-label{font-size:13px; font-weight:600; color:var(--text-muted); margin-bottom:10px;}
+  .toc ol{margin:0; padding-left:20px;}
+  .toc li{margin-bottom:6px;}
+  .toc a{text-decoration:none; color:var(--text);}
+  .toc a:hover{color:var(--blue);}
+
+  .cell{
+    background:var(--cell-bg);
+    border:1px solid var(--border);
+    border-left:4px solid var(--border);
+    border-radius:10px;
+    padding:26px 28px;
+    margin-bottom:24px;
+  }
+  .cell h2{font-size:21px; margin:0 0 12px; font-weight:600;}
+  .cell p{margin:0 0 12px;}
+  .cell ol, .cell ul{padding-left:20px; margin:10px 0;}
+  .cell li{margin-bottom:8px;}
+
+  .cell.tip{border-left-color:var(--blue);}
+  .cell.warn{border-left-color:var(--amber); background:var(--amber-bg);}
+  .cell.done{border-left-color:var(--green); background:var(--green-bg);}
+
+  .tag{
+    font-family:'JetBrains Mono', monospace;
+    font-size:11px;
+    color:var(--text-muted);
+    margin-bottom:10px;
+    display:block;
+  }
+
+  pre{
+    background:var(--code-bg);
+    border-radius:8px;
+    padding:14px 16px;
+    overflow-x:auto;
+    margin:12px 0;
+  }
+  pre code{background:none; color:#e8e6df; padding:0; font-size:13.5px;}
+
+  .os-tabs{display:flex; gap:4px; margin:14px 0 0;}
+  .os-tab{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12.5px;
+    padding:6px 14px;
+    border-radius:6px;
+    border:1px solid var(--border);
+    background:#fff;
+    color:var(--text-muted);
+    cursor:pointer;
+  }
+  .os-tab.active{background:var(--blue); color:#fff; border-color:var(--blue);}
+  .os-panel{display:none; margin-top:12px;}
+  .os-panel.active{display:block;}
+
+  .checklist{list-style:none; padding:0; margin:0;}
+  .checklist li{
+    display:flex; align-items:flex-start; gap:10px;
+    margin-bottom:10px;
+  }
+  .checklist li::before{content:"☐"; color:var(--green); font-size:18px; line-height:1.3;}
+
+  footer{
+    text-align:center; color:var(--text-muted);
+    font-size:13px; margin-top:48px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <span class="badge">📓 Guía interactiva — estilo notebook</span>
+  <h1>Instalación del entorno de desarrollo</h1>
+  <p class="subtitle">Programación Avanzada · lo que necesitas instalar antes de la segunda clase, con el proyecto que vamos a construir juntos este semestre.</p>
+
+  <div class="toc">
+    <div class="toc-label">Contenido de esta guía</div>
+    <ol>
+      <li><a href="#s1">¿Qué vas a instalar y para qué?</a></li>
+      <li><a href="#s2">JDK 21</a></li>
+      <li><a href="#s3">IntelliJ IDEA</a></li>
+      <li><a href="#s4">MariaDB</a></li>
+      <li><a href="#s5">Git</a></li>
+      <li><a href="#s6">Visual Studio Code</a></li>
+      <li><a href="#s7">Antes de la próxima clase</a></li>
+    </ol>
+  </div>
+
+  <div class="cell tip" id="s1">
+    <span class="tag">md [1]</span>
+    <h2>💡 ¿Qué vas a instalar y para qué?</h2>
+    <p>Vamos a construir un e-commerce completo: el <strong>backend</strong> (la lógica y los datos) en Spring Boot, y el <strong>frontend</strong> (lo que ve el usuario) en Angular. Para eso necesitas cinco herramientas, cada una con un trabajo distinto:</p>
+    <ul>
+      <li><strong>JDK</strong>: le permite a tu computador entender y ejecutar código Java.</li>
+      <li><strong>IntelliJ IDEA</strong>: el editor donde vas a escribir el backend.</li>
+      <li><strong>MariaDB</strong>: la base de datos donde se guarda la información del proyecto.</li>
+      <li><strong>Git</strong>: para guardar y compartir el código durante el semestre.</li>
+      <li><strong>Visual Studio Code</strong>: el editor para el frontend en Angular.</li>
+    </ul>
+    <p>🧠 Analogía: si el proyecto fuera una casa, el JDK es la electricidad que hace que todo funcione, IntelliJ y VS Code son tus herramientas de construcción, y MariaDB es donde guardas todos los documentos importantes.</p>
+  </div>
+
+  <div class="cell" id="s2">
+    <span class="tag">md [2]</span>
+    <h2>⚙️ JDK 21</h2>
+    <p>Se instala primero — todo lo demás depende de él.</p>
+
+    <div class="os-tabs" data-group="jdk">
+      <button class="os-tab active" data-os="win">Windows</button>
+      <button class="os-tab" data-os="mac">macOS</button>
+      <button class="os-tab" data-os="linux">Linux</button>
+    </div>
+    <div class="os-panel active" data-group="jdk" data-os="win">
+      <ol>
+        <li>Entra a <a href="https://adoptium.net/es/temurin/releases/?version=21" target="_blank">Adoptium — Temurin 21</a>.</li>
+        <li>Elige <strong>Windows</strong>, arquitectura <strong>x64</strong>, y descarga el <code>.msi</code>.</li>
+        <li>Instálalo marcando la opción <strong>"Set JAVA_HOME variable"</strong> si aparece.</li>
+      </ol>
+    </div>
+    <div class="os-panel" data-group="jdk" data-os="mac">
+      <ol>
+        <li>Entra a <a href="https://adoptium.net/es/temurin/releases/?version=21" target="_blank">Adoptium — Temurin 21</a>.</li>
+        <li>Elige <strong>macOS</strong> y tu arquitectura (<strong>aarch64</strong> en Apple Silicon, <strong>x64</strong> en Intel).</li>
+        <li>Descarga el <code>.pkg</code> e instala con el asistente.</li>
+      </ol>
+    </div>
+    <div class="os-panel" data-group="jdk" data-os="linux">
+      <ol>
+        <li>Entra a <a href="https://adoptium.net/es/temurin/releases/?version=21" target="_blank">Adoptium — Temurin 21</a> o instala desde terminal:</li>
+      </ol>
+      <pre><code>sudo apt update
+sudo apt install temurin-21-jdk</code></pre>
+    </div>
+
+    <pre><code>java -version
+javac -version</code></pre>
+    <p>✅ Ambos comandos deben mostrarte la versión 21.</p>
+  </div>
+
+  <div class="cell" id="s3">
+    <span class="tag">md [3]</span>
+    <h2>🖥️ IntelliJ IDEA</h2>
+    <p>Usamos la versión <strong>Ultimate</strong> (no Community) — tiene soporte para Spring Boot y es gratuita para estudiantes.</p>
+    <ol>
+      <li>Descárgala desde <a href="https://www.jetbrains.com/es-es/idea/download/" target="_blank">JetBrains — IntelliJ IDEA</a>, elige tu sistema operativo y la versión <strong>Ultimate</strong>.</li>
+      <li>Crea una cuenta en <a href="https://account.jetbrains.com/login" target="_blank">JetBrains Account</a> con tu <strong>correo institucional</strong>.</li>
+      <li>Solicita la licencia gratuita de estudiante en <a href="https://www.jetbrains.com/shop/eform/students" target="_blank">jetbrains.com/shop/eform/students</a>.</li>
+      <li>Instálala y abre sesión con tu cuenta de JetBrains.</li>
+    </ol>
+    <p>💡 Si no habías instalado el JDK antes de este paso, no pasa nada: al crear tu primer proyecto puedes usar <em>New Project → JDK → Download JDK...</em> y elegir la versión 21 desde ahí mismo.</p>
+  </div>
+
+  <div class="cell" id="s4">
+    <span class="tag">md [4]</span>
+    <h2>🗄️ MariaDB</h2>
+    <p>Aquí va a vivir toda la información del proyecto (usuarios, productos, compras).</p>
+    <ol>
+      <li>Descárgala desde <a href="https://mariadb.org/download/" target="_blank">mariadb.org/download</a>, versión <strong>12</strong>.</li>
+      <li>Durante la instalación, define una contraseña para el usuario <code>root</code> — <strong>anótala</strong>, la vas a necesitar todo el semestre.</li>
+    </ol>
+    <pre><code>mariadb --version
+mariadb -u root -p</code></pre>
+    <p>✅ Si entras al prompt <code>MariaDB [(none)]&gt;</code>, quedó lista.</p>
+    <div class="cell warn" style="margin-top:14px;">
+      <span class="tag">nota</span>
+      <p style="margin:0;">En Mac, si el instalador de la web te da problemas, puedes instalarla con Homebrew: <code>brew install mariadb</code> y luego <code>brew services start mariadb</code>.</p>
+    </div>
+  </div>
+
+  <div class="cell" id="s5">
+    <span class="tag">md [5]</span>
+    <h2>🔧 Git</h2>
+    <p>Lo vamos a usar para guardar y compartir el código del proyecto durante todo el semestre.</p>
+    <ol>
+      <li>Descárgalo desde <a href="https://git-scm.com/downloads" target="_blank">git-scm.com/downloads</a> y elige tu sistema operativo.</li>
+      <li>Instala con las opciones por defecto.</li>
+    </ol>
+    <pre><code>git --version</code></pre>
+    <p>✅ Debe mostrarte un número de versión.</p>
+  </div>
+
+  <div class="cell" id="s6">
+    <span class="tag">md [6]</span>
+    <h2>🎨 Visual Studio Code</h2>
+    <p>El editor para la parte de frontend (Angular).</p>
+    <ol>
+      <li>Descárgalo desde <a href="https://code.visualstudio.com/download" target="_blank">code.visualstudio.com/download</a>.</li>
+      <li>Instala las extensiones: <strong>ESLint</strong>, <strong>Prettier</strong> y <strong>Angular Language Service</strong> (ícono de cuadritos en la barra lateral).</li>
+    </ol>
+  </div>
+
+  <div class="cell done" id="s7">
+    <span class="tag">md [7]</span>
+    <h2>✅ Antes de la próxima clase</h2>
+    <ul class="checklist">
+      <li><a href="#s2">JDK 21 instalado y verificado (<code>java -version</code>)</a></li>
+      <li><a href="#s3">IntelliJ IDEA Ultimate instalado, con sesión iniciada</a></li>
+      <li><a href="#s4">MariaDB instalada, contraseña de root anotada</a></li>
+      <li><a href="#s5">Git instalado y verificado (<code>git --version</code>)</a></li>
+      <li><a href="#s6">VS Code instalado con las extensiones de Angular</a></li>
+    </ul>
+    <p>Trae tu computador con todo esto listo — vamos a empezar a crear el proyecto en la primera parte de la clase.</p>
+  </div>
+
+  <footer>Programación Avanzada · Universidad del Quindío · 2026-2</footer>
+</div>
+
+<script>
+  document.querySelectorAll('.os-tab').forEach(function(tab){
+    tab.addEventListener('click', function(){
+      var group = tab.getAttribute('data-group');
+      var os = tab.getAttribute('data-os');
+      document.querySelectorAll('.os-tab[data-group="'+group+'"]').forEach(function(t){t.classList.remove('active');});
+      tab.classList.add('active');
+      document.querySelectorAll('.os-panel[data-group="'+group+'"]').forEach(function(p){
+        p.classList.toggle('active', p.getAttribute('data-os') === os);
+      });
+    });
+  });
+</script>
+</body>
+</html>
