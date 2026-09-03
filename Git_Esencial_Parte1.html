@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Git esencial — Programación Avanzada</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #fafaf7; --cell-bg: #ffffff; --border: #e4e2da;
+    --text: #2b2b28; --text-muted: #6b6a63;
+    --blue: #3b6fa0; --blue-bg: #eef4fa;
+    --green: #3f8f5f; --green-bg: #eaf6ef;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--bg); color:var(--text); font-family:'Inter', sans-serif; line-height:1.65;}
+  .wrap{max-width:760px; margin:0 auto; padding:56px 24px 100px;}
+  a{color:var(--blue);}
+  code{font-family:'JetBrains Mono', monospace; background:var(--blue-bg); padding:2px 6px; border-radius:4px; font-size:0.92em;}
+  .badge{display:inline-block; font-family:'JetBrains Mono', monospace; font-size:13px; color:var(--text-muted); background:var(--cell-bg); border:1px solid var(--border); border-radius:20px; padding:5px 14px; margin-bottom:20px;}
+  h1{font-size:32px; font-weight:700; margin:0 0 6px; line-height:1.2;}
+  .subtitle{color:var(--text-muted); font-size:16px; margin-bottom:36px;}
+  .toc{background:var(--cell-bg); border:1px solid var(--border); border-radius:10px; padding:20px 24px; margin-bottom:40px;}
+  .toc-label{font-size:13px; font-weight:600; color:var(--text-muted); margin-bottom:10px;}
+  .toc ol{margin:0; padding-left:20px;}
+  .toc li{margin-bottom:6px;}
+  .toc a{text-decoration:none; color:var(--text);}
+  .toc a:hover{color:var(--blue);}
+  .cell{background:var(--cell-bg); border:1px solid var(--border); border-left:4px solid var(--border); border-radius:10px; padding:26px 28px; margin-bottom:24px;}
+  .cell h2{font-size:21px; margin:0 0 12px; font-weight:600;}
+  .cell p{margin:0 0 12px;}
+  .cell ol, .cell ul{padding-left:20px; margin:10px 0;}
+  .cell li{margin-bottom:8px;}
+  .cell.tip{border-left-color:var(--blue);}
+  .cell.done{border-left-color:var(--green); background:var(--green-bg);}
+  .tag{font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--text-muted); margin-bottom:10px; display:block;}
+  .step-num{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:28px; height:28px; border-radius:50%; background:var(--blue);
+    color:#fff; font-weight:700; font-size:14px; margin-right:8px;
+  }
+  pre{background:#2b2b28; border-radius:8px; padding:14px 16px; overflow-x:auto; margin:12px 0;}
+  pre code{background:none; color:#e8e6df; padding:0; font-size:13.5px;}
+  footer{text-align:center; color:var(--text-muted); font-size:13px; margin-top:48px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <span class="badge">📓 Guía interactiva — Parte 1 de 2</span>
+  <h1>Git esencial</h1>
+  <p class="subtitle">Programación Avanzada · lo único que necesitas para empezar a trabajar con Git esta semana. La parte de ramas y trabajo en equipo la vemos más adelante.</p>
+
+  <div class="toc">
+    <div class="toc-label">Contenido de esta guía</div>
+    <ol>
+      <li><a href="#s1">¿Qué son Git y GitHub?</a></li>
+      <li><a href="#s2">Configuración (una sola vez)</a></li>
+      <li><a href="#s3">El ciclo esencial: pull → add → commit → push</a></li>
+      <li><a href="#s4">Ejercicio guiado paso a paso</a></li>
+      <li><a href="#s5">Cheatsheet</a></li>
+    </ol>
+  </div>
+
+  <div class="cell tip" id="s1">
+    <span class="tag">md [1]</span>
+    <h2>💡 ¿Qué son Git y GitHub?</h2>
+    <p><strong>Git</strong> guarda un historial de todos los cambios de tu código — como el "historial de versiones" de Google Docs, pero para programación. <strong>GitHub</strong> es la página web donde ese historial vive también en internet, para que todos en el grupo lo vean y trabajen sobre lo mismo.</p>
+  </div>
+
+  <div class="cell" id="s2">
+    <span class="tag">md [2]</span>
+    <h2>⚙️ Configuración (una sola vez por computador)</h2>
+    <pre><code>git config --global user.name "Tu Nombre"
+git config --global user.email "tu-correo@ejemplo.com"</code></pre>
+  </div>
+
+  <div class="cell" id="s3">
+    <span class="tag">md [3]</span>
+    <h2>🔁 El ciclo esencial</h2>
+    <p>Estos 4 comandos son el 90% de lo que vas a usar todo el semestre. Siempre en este orden:</p>
+    <p><span class="step-num">1</span><code>git pull</code> — traes lo último que subieron tus compañeros, antes de empezar a trabajar.</p>
+    <p><span class="step-num">2</span><code>git add .</code> — marcas tus cambios como "listos para guardar".</p>
+    <p><span class="step-num">3</span><code>git commit -m "mensaje claro"</code> — guardas esos cambios con una nota explicando qué hiciste.</p>
+    <p><span class="step-num">4</span><code>git push</code> — subes tus cambios a GitHub, para que todos los vean.</p>
+    <p>💡 Piénsalo como enviar un correo: <code>add</code> es escribir el mensaje, <code>commit</code> es ponerle asunto, <code>push</code> es darle enviar.</p>
+  </div>
+
+  <div class="cell done" id="s4">
+    <span class="tag">md [4]</span>
+    <h2>✅ Ejercicio guiado paso a paso</h2>
+    <p>Vamos a hacerlo juntos en clase, cada quien en su propio computador:</p>
+    <ol>
+      <li>Entra a <a href="https://github.com" target="_blank">github.com</a> con tu cuenta y crea un repositorio nuevo llamado <code>practica-git-tunombre</code> (público, con README).</li>
+      <li>Copia la URL del repo (botón verde <strong>Code</strong>).</li>
+      <li>En tu terminal, clónalo:
+        <pre><code>git clone URL-QUE-COPIASTE</code></pre>
+      </li>
+      <li>Entra a la carpeta que se creó:
+        <pre><code>cd practica-git-tunombre</code></pre>
+      </li>
+      <li>Agrega una línea al README:
+        <pre><code>echo "Mi primera práctica de Git" >> README.md</code></pre>
+      </li>
+      <li>Ahora el ciclo completo:
+        <pre><code>git add .
+git commit -m "Mi primer commit"
+git push</code></pre>
+      </li>
+      <li>Entra a tu repo en GitHub (en el navegador) y confirma que el cambio ya aparece ahí.</li>
+    </ol>
+  </div>
+
+  <div class="cell tip" id="s5">
+    <span class="tag">md [5]</span>
+    <h2>📋 Cheatsheet</h2>
+    <pre><code># Una vez
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu-correo@ejemplo.com"
+git clone URL
+
+# Cada vez que trabajas
+git pull
+git add .
+git commit -m "mensaje claro"
+git push
+
+# Para ver qué está pasando
+git status
+git log --oneline</code></pre>
+  </div>
+
+  <footer>Universidad del Quindío 💚 2026 · Programación Avanzada</footer>
+</div>
+</body>
+</html>
