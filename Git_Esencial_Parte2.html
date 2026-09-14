@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Git 2 — Ramas y problemas comunes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #fafaf7; --cell-bg: #ffffff; --border: #e4e2da;
+    --text: #2b2b28; --text-muted: #6b6a63;
+    --blue: #3b6fa0; --blue-bg: #eef4fa;
+    --amber: #c98a2b; --amber-bg: #fbf2e2;
+    --green: #3f8f5f; --green-bg: #eaf6ef;
+    --red: #b6533f; --red-bg: #fbeceb;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--bg); color:var(--text); font-family:'Inter', sans-serif; line-height:1.65;}
+  .wrap{max-width:800px; margin:0 auto; padding:56px 24px 100px;}
+  a{color:var(--blue);}
+  code{font-family:'JetBrains Mono', monospace; background:var(--blue-bg); padding:2px 6px; border-radius:4px; font-size:0.92em;}
+  .badge{display:inline-block; font-family:'JetBrains Mono', monospace; font-size:13px; color:var(--text-muted); background:var(--cell-bg); border:1px solid var(--border); border-radius:20px; padding:5px 14px; margin-bottom:20px;}
+  h1{font-size:32px; font-weight:700; margin:0 0 6px; line-height:1.2;}
+  .subtitle{color:var(--text-muted); font-size:16px; margin-bottom:4px;}
+  .toc{background:var(--cell-bg); border:1px solid var(--border); border-radius:10px; padding:20px 24px; margin:24px 0 40px;}
+  .toc-label{font-size:13px; font-weight:600; color:var(--text-muted); margin-bottom:10px;}
+  .toc ol{margin:0; padding-left:20px;}
+  .toc li{margin-bottom:6px;}
+  .toc a{text-decoration:none; color:var(--text);}
+  .toc a:hover{color:var(--blue);}
+  .cell{background:var(--cell-bg); border:1px solid var(--border); border-left:4px solid var(--border); border-radius:10px; padding:26px 28px; margin-bottom:24px;}
+  .cell h2{font-size:21px; margin:0 0 12px; font-weight:600;}
+  .cell h3{font-size:15px; margin:18px 0 8px; font-weight:600;}
+  .cell p{margin:0 0 12px;}
+  .cell ol, .cell ul{padding-left:20px; margin:10px 0;}
+  .cell li{margin-bottom:8px;}
+  .cell.tip{border-left-color:var(--blue);}
+  .cell.warn{border-left-color:var(--amber); background:var(--amber-bg);}
+  .cell.done{border-left-color:var(--green); background:var(--green-bg);}
+  .cell.problem{border-left-color:var(--red);}
+  .tag{font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--text-muted); margin-bottom:10px; display:block;}
+  pre{background:#2b2b28; border-radius:8px; padding:14px 16px; overflow-x:auto; margin:12px 0;}
+  pre code{background:none; color:#e8e6df; padding:0; font-size:13.5px;}
+  .error-msg{background:#3a1f1f; color:#f2b8b5; font-family:'JetBrains Mono', monospace; font-size:12.5px; padding:10px 14px; border-radius:6px; margin:10px 0;}
+  .solution{background:var(--green-bg); border-radius:6px; padding:12px 14px; margin-top:8px;}
+  .solution-label{font-weight:600; color:var(--green); font-size:12px; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:6px; display:block;}
+  footer{text-align:center; color:var(--text-muted); font-size:13px; margin-top:48px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <span class="badge">📓 Guía interactiva — Git 2</span>
+  <h1>Git 2: Ramas y problemas comunes</h1>
+  <p class="subtitle">Programación Avanzada · lo que necesitas para trabajar en equipo sin pisarte con tus compañeros de grupo.</p>
+  <p class="subtitle">Docente: Valentina Oviedo Sánchez</p>
+
+  <div class="toc">
+    <div class="toc-label">Contenido de esta guía</div>
+    <ol>
+      <li><a href="#s1">¿Qué es una rama?</a></li>
+      <li><a href="#s1b">Flujo completo: crear, trabajar, subir y fusionar</a></li>
+      <li><a href="#s2">Ramas para el proyecto del semestre</a></li>
+      <li><a href="#s2b">Ejemplos: distintas formas de organizar su repo</a></li>
+      <li><a href="#s3">Problema 1: "not a git repository"</a></li>
+      <li><a href="#s4">Problema 2: rechazado por "fetch first"</a></li>
+      <li><a href="#s5">Problema 3: conflicto de merge</a></li>
+      <li><a href="#s6">Problema 4: hice commit en la rama equivocada</a></li>
+      <li><a href="#s7">Problema 5: quiero deshacer mi último commit</a></li>
+      <li><a href="#s8">Problema 6: subí algo que no debía (contraseñas, archivos grandes)</a></li>
+      <li><a href="#s9">Cheatsheet de ramas</a></li>
+    </ol>
+  </div>
+
+  <div class="cell tip" id="s1">
+    <span class="tag">md [1]</span>
+    <h2>🌿 ¿Qué es una rama?</h2>
+    <p>Una rama es una línea de desarrollo independiente. La rama principal casi siempre se llama <code>main</code>. Trabajar en una rama aparte les permite avanzar en algo (una funcionalidad, un experimento) sin afectar el código que ya funciona en <code>main</code>, hasta que estén seguros de que está listo.</p>
+    <pre><code>git checkout -b feature/mi-funcionalidad   # crea la rama y te mueve a ella
+git add .
+git commit -m "feat: avance de mi funcionalidad"
+git checkout main
+git merge feature/mi-funcionalidad         # trae los cambios a main
+git push</code></pre>
+  </div>
+
+  <div class="cell done" id="s1b">
+    <span class="tag">md [1b]</span>
+    <h2>🔁 Flujo completo: crear, trabajar, subir y fusionar</h2>
+    <p>Aquí está el proceso completo, paso a paso, desde que crean la rama hasta que su código ya quedó integrado en <code>main</code> para siempre.</p>
+
+    <h3>1. Crear la rama</h3>
+    <p>Antes de empezar algo nuevo, asegúrense de partir de la versión más reciente de <code>main</code>:</p>
+    <pre><code>git checkout main
+git pull                                # traen lo último antes de ramificar
+git checkout -b feature/registrar-compra</code></pre>
+
+    <h3>2. Trabajar y hacer commits en la rama</h3>
+    <p>Programan normal, y van guardando avances con commits pequeños y frecuentes — no uno solo gigante al final:</p>
+    <pre><code>git add .
+git commit -m "feat: valida que no exista una compra duplicada"
+# ... siguen trabajando ...
+git add .
+git commit -m "feat: implementa el método confirmar()"</code></pre>
+
+    <h3>3. Subir la rama al repositorio remoto</h3>
+    <p>La <strong>primera vez</strong> que suben esa rama, usan <code>-u</code> (de "upstream") para conectarla con GitHub:</p>
+    <pre><code>git push -u origin feature/registrar-compra</code></pre>
+    <p>De ahí en adelante, mientras sigan en esa misma rama, basta con <code>git push</code> a secas — Git ya sabe a dónde mandarlo.</p>
+
+    <h3>4. Verificar que funciona antes de fusionar</h3>
+    <p>Antes de mezclar con <code>main</code>, confirmen que su parte realmente funciona:</p>
+    <ul>
+      <li>Corran el proyecto y prueben la funcionalidad manualmente.</li>
+      <li>Si ya tienen pruebas unitarias de esa parte, córranlas.</li>
+      <li>Si pueden, pídanle a un compañero que revise su código antes de fusionar (aunque sea informalmente, leyendo el diff en GitHub).</li>
+    </ul>
+
+    <h3>5. Fusionar a main, una vez verificado</h3>
+    <pre><code>git checkout main
+git pull                                # traer lo que otros hayan fusionado mientras tanto
+git merge feature/registrar-compra
+git push</code></pre>
+    <p>Si aparece un conflicto en el <code>merge</code>, resuélvanlo siguiendo el Problema 3 de esta guía, más abajo.</p>
+
+    <h3>6. Borrar la rama ya fusionada (opcional, pero recomendado)</h3>
+    <p>Una vez que su rama ya está integrada en <code>main</code>, no necesitan conservarla — borrarla mantiene el repositorio ordenado:</p>
+    <pre><code>git branch -d feature/registrar-compra              # borra la rama local
+git push origin --delete feature/registrar-compra   # borra la rama en GitHub</code></pre>
+
+    <div class="solution">
+      <span class="solution-label">Resumen del ciclo completo</span>
+      <code>pull</code> en main → <code>checkout -b</code> → trabajar y <code>commit</code> → <code>push -u origin</code> → verificar → <code>checkout main</code> → <code>pull</code> → <code>merge</code> → <code>push</code> → borrar la rama.
+    </div>
+  </div>
+
+  <div class="cell" id="s2">
+    <span class="tag">md [2]</span>
+    <h2>🗂️ Ramas para el proyecto del semestre</h2>
+    <p>Para su proyecto en grupo, usen esta convención de nombres — les va a evitar confusiones y les da algo profesional que mostrar en la sustentación:</p>
+    <ul>
+      <li><code>feature/nombre-del-caso-de-uso</code> — para una funcionalidad nueva, ej. <code>feature/registrar-compra</code></li>
+      <li><code>fix/descripcion-corta</code> — para corregir un error, ej. <code>fix/validacion-precio-negativo</code></li>
+      <li><code>docs/descripcion-corta</code> — para documentación, ej. <code>docs/glosario-lenguaje-ubicuo</code></li>
+    </ul>
+    <p><strong>Regla de oro para el grupo:</strong> nadie trabaja directo sobre <code>main</code> a partir de ahora. Cada quien crea su rama para lo que le toque, y solo se fusiona a <code>main</code> cuando ya funciona.</p>
+    <div class="solution">
+      <span class="solution-label">Ejemplo de reparto en un grupo de 3</span>
+      Persona A: <code>feature/registrar-compra</code> · Persona B: <code>feature/publicar-producto</code> · Persona C: <code>feature/dejar-comentario</code> — cada uno en su propia rama, fusionando a <code>main</code> cuando su parte esté lista y probada.
+    </div>
+  </div>
+
+  <div class="cell tip" id="s2b">
+    <span class="tag">md [2b]</span>
+    <h2>🗺️ Ejemplos: distintas formas de organizar su repo</h2>
+    <p>No hay una única forma "correcta" de repartir las ramas — depende de cómo trabaje su grupo. Aquí tienen 3 ejemplos reales para que vean las opciones y elijan la que mejor les quede.</p>
+
+    <h3>Opción 1 — Por caso de uso (la más recomendada para este proyecto)</h3>
+    <p>Cada rama representa una funcionalidad completa del negocio, sin importar quién la haga.</p>
+    <pre><code>main
+feature/registrar-compra
+feature/publicar-producto
+feature/dejar-comentario
+feature/solicitar-reembolso</code></pre>
+    <p>✅ Ventaja: en la sustentación pueden mostrar "esta rama es el caso de uso X", clarísimo para explicar. ✅ Encaja perfecto con cómo van a ir armando los Casos de Uso guía por guía.</p>
+
+    <h3>Opción 2 — Por integrante del grupo</h3>
+    <p>Cada persona tiene su propia rama de trabajo general, y ahí va avanzando lo que le toque esa semana.</p>
+    <pre><code>main
+feature/juan
+feature/maria
+feature/andres</code></pre>
+    <p>⚠️ Funciona, pero es menos clara para la sustentación — si alguien pregunta "¿qué hay en <code>feature/juan</code>?", la respuesta es "depende de la semana", no una funcionalidad concreta.</p>
+
+    <h3>Opción 3 — Por capa técnica</h3>
+    <p>Una rama para todo el trabajo de backend, otra para todo el frontend.</p>
+    <pre><code>main
+feature/backend-dominio
+feature/frontend-angular</code></pre>
+    <p>⚠️ Útil solo si el grupo se dividió tajantemente en "los del backend" y "los del frontend" — para este curso, donde todos deben entender ambas partes, no es la más recomendable.</p>
+
+    <div class="solution">
+      <span class="solution-label">Recomendación</span>
+      Usen la <strong>Opción 1</strong> (por caso de uso) como base — es la que mejor refleja cómo van a construir el proyecto guía por guía, y la más fácil de explicar en la sustentación final.
+    </div>
+  </div>
+
+  <div class="cell problem" id="s3">
+    <span class="tag">problema 1</span>
+    <h2>"fatal: not a git repository"</h2>
+    <p><strong>Cuándo aparece:</strong> al correr cualquier comando git estando fuera de la carpeta del repositorio.</p>
+    <div class="error-msg">fatal: not a git repository (or any of the parent directories): .git</div>
+    <div class="solution">
+      <span class="solution-label">Solución</span>
+      <pre><code>pwd                     # confirma dónde estás
+cd ruta/a/tu/repo       # ubícate dentro del repo
+git status              # ahora sí funciona</code></pre>
+    </div>
+  </div>
+
+  <div class="cell problem" id="s4">
+    <span class="tag">problema 2</span>
+    <h2>Rechazado por "fetch first" / "non-fast-forward"</h2>
+    <p><strong>Cuándo aparece:</strong> intentas hacer push, pero alguien más ya subió cambios a esa misma rama antes que tú.</p>
+    <div class="error-msg">! [rejected]  main -> main (fetch first)
+error: failed to push some refs</div>
+    <div class="solution">
+      <span class="solution-label">Solución</span>
+      <pre><code>git pull                # trae los cambios de tu compañero primero
+git push                # ahora sí sube los tuyos</code></pre>
+      Si al hacer <code>pull</code> aparece un conflicto, pasa al Problema 3.
+    </div>
+  </div>
+
+  <div class="cell problem" id="s5">
+    <span class="tag">problema 3</span>
+    <h2>Conflicto de merge</h2>
+    <p><strong>Cuándo aparece:</strong> dos personas modificaron la misma línea del mismo archivo.</p>
+    <p>Git marca el archivo así:</p>
+    <pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+tu código
+=======
+el código de tu compañero
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/rama-de-tu-compañero</code></pre>
+    <div class="solution">
+      <span class="solution-label">Solución</span>
+      <ol>
+        <li>Abre el archivo, decide qué código dejar (el tuyo, el de tu compañero, o una combinación de ambos).</li>
+        <li>Borra las líneas <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code> y <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>.</li>
+        <li>Guarda, y termina el merge:</li>
+      </ol>
+      <pre><code>git add archivo-con-conflicto.java
+git commit -m "fix: resuelve conflicto de merge"</code></pre>
+      Habla con tu compañero antes de resolverlo solo — muchas veces la mejor solución es combinar ambas partes.
+    </div>
+  </div>
+
+  <div class="cell problem" id="s6">
+    <span class="tag">problema 4</span>
+    <h2>Hice commit en la rama equivocada</h2>
+    <p><strong>Cuándo aparece:</strong> olvidaste crear tu rama y trabajaste directo sobre <code>main</code>, o sobre la rama de otra persona.</p>
+    <div class="solution">
+      <span class="solution-label">Solución (si el commit AÚN NO se subió con push)</span>
+      <pre><code>git branch feature/mi-rama-correcta   # crea la rama en el punto actual
+git reset --hard HEAD~1               # regresa main a como estaba antes
+git checkout feature/mi-rama-correcta # tu commit está a salvo aquí</code></pre>
+      <span class="solution-label">Si ya hiciste push a la rama equivocada</span>
+      Avísale a tu docente o a tu equipo antes de forzar cambios — mover commits que otros ya vieron puede generar más confusión que dejarlo así y seguir desde ahí.
+    </div>
+  </div>
+
+  <div class="cell problem" id="s7">
+    <span class="tag">problema 5</span>
+    <h2>Quiero deshacer mi último commit</h2>
+    <div class="solution">
+      <span class="solution-label">Si el commit es solo local (no le has hecho push)</span>
+      <pre><code>git reset --soft HEAD~1   # deshace el commit, deja los cambios listos para repetirlo bien</code></pre>
+      <span class="solution-label">Si ya le hiciste push y otros ya lo tienen</span>
+      <pre><code>git revert HEAD           # crea un commit nuevo que cancela el anterior, sin borrar historial</code></pre>
+      <p>💡 <code>revert</code> es más seguro en equipo porque no reescribe el historial que otros ya descargaron.</p>
+    </div>
+  </div>
+
+  <div class="cell problem" id="s8">
+    <span class="tag">problema 6</span>
+    <h2>Subí algo que no debía (contraseñas, archivos generados)</h2>
+    <div class="solution">
+      <span class="solution-label">Para que no vuelva a pasar</span>
+      Agrega un archivo <code>.gitignore</code> en la raíz del repo con lo que nunca debe subirse:
+      <pre><code>.env
+application-secrets.properties
+/build/
+/node_modules/</code></pre>
+      <span class="solution-label">Si ya lo subiste por error</span>
+      Avísale a tu docente — si es una contraseña real, cámbiala de inmediato (el archivo queda en el historial aunque lo borres después, así que la contraseña ya debe considerarse expuesta).
+    </div>
+  </div>
+
+  <div class="cell done" id="s9">
+    <span class="tag">md [9]</span>
+    <h2>📋 Cheatsheet de ramas</h2>
+    <pre><code># Crear y moverte a una rama nueva
+git checkout -b feature/nombre-caso-de-uso
+
+# Ver en qué rama estás y cuáles existen
+git branch
+
+# Cambiar de rama
+git checkout nombre-rama
+
+# Traer los cambios de una rama a la actual
+git merge nombre-rama
+
+# Subir tu rama por primera vez
+git push -u origin feature/nombre-caso-de-uso
+
+# Borrar una rama que ya fusionaste
+git branch -d nombre-rama</code></pre>
+  </div>
+
+  <footer>Universidad del Quindío 💚 2026 · Programación Avanzada · Docente: Valentina Oviedo Sánchez</footer>
+</div>
+</body>
+</html>
