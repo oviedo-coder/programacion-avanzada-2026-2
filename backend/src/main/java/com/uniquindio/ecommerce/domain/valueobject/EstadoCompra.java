@@ -7,6 +7,7 @@ public enum EstadoCompra {
     REEMBOLSADA;
 
 
+
     // El conocimiento de las transiciones válidas vive AQUÍ, no en ifs
     // dispersos por el código del agregado.
 

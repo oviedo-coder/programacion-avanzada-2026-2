@@ -5,8 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ca14a49-2dd5-4430-be09-488847dfbbe9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/entity/Compra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/valueobject/EstadoCompra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/usecase/RealizarCompraUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/repository/CompraRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/CompraRepositoryEnMemoria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/uniquindio/ecommerce/domain/entity/CompraTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/uniquindio/ecommerce/domain/entity/Modelo3DTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/uniquindio/ecommerce/domain/valueobject/PrecioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Compra.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/DemoCompra.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/EstadoCompra.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/EcommerceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/demo/DemoCompra.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/entity/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/entity/Compra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/entity/Modelo3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/entity/Modelo3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/valueobject/EstadoCompra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/valueobject/EstadoCompra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/valueobject/Licencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/valueobject/Licencia.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +36,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="22" />
+    <option name="cachedIndexableFilesCount" value="30" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -26,6 +48,7 @@
       <list>
         <option value="Record" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -39,61 +62,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.9098994197598028E-7" />
-      <entry key="MS500" value="0.045310838534620486" />
-      <entry key="S2" value="0.46426241668621826" />
-      <entry key="S5" value="0.938991008053562" />
-      <entry key="S10" value="1.9633264932227512" />
-      <entry key="S30" value="5.847707088438217" />
-      <entry key="S60" value="10.403523187040173" />
-      <entry key="M2" value="17.892847384523687" />
-      <entry key="M5" value="30.004350238310302" />
-      <entry key="M10" value="37.94583388782425" />
-      <entry key="M15" value="41.63224024760763" />
-      <entry key="M30" value="46.1869674382028" />
-      <entry key="H1" value="48.904274056784566" />
-      <entry key="H2" value="50.3999944561143" />
-      <entry key="H4" value="51.1862933421809" />
-      <entry key="D1" value="51.862418963052534" />
-      <entry key="W1" value="51.98029668189903" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.000000736514353" />
+      <entry key="S2" value="1.0499300287499886" />
+      <entry key="S5" value="1.508144292554983" />
+      <entry key="S10" value="2.1849044179086956" />
+      <entry key="S30" value="3.1779802686122913" />
+      <entry key="S60" value="3.7333092008937085" />
+      <entry key="M2" value="6.046026924047373" />
+      <entry key="M5" value="15.19196093053596" />
+      <entry key="M10" value="24.795590599327983" />
+      <entry key="M15" value="32.88622738083231" />
+      <entry key="M30" value="57.55184501533248" />
+      <entry key="H1" value="95.57270501274371" />
+      <entry key="H2" value="136.97000273654072" />
+      <entry key="H4" value="176.669674495018" />
+      <entry key="D1" value="242.9028143667092" />
+      <entry key="W1" value="260.74759588173083" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000000000013" />
-      <entry key="S2" value="1.0001946923378886" />
-      <entry key="S5" value="1.0363526723983534" />
-      <entry key="S10" value="1.2920228759517753" />
-      <entry key="S30" value="3.0271693631226344" />
-      <entry key="S60" value="5.4227918517766005" />
-      <entry key="M2" value="8.806683012109016" />
-      <entry key="M5" value="13.091063791733193" />
-      <entry key="M10" value="15.263130196018833" />
-      <entry key="M15" value="16.105054981010834" />
-      <entry key="M30" value="17.0152053406047" />
-      <entry key="H1" value="17.497846148620102" />
-      <entry key="H2" value="17.74642840052841" />
-      <entry key="H4" value="17.872583439878575" />
-      <entry key="D1" value="17.97867569203172" />
-      <entry key="W1" value="17.996951501942902" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="6.4864315433268486E-223" />
+      <entry key="S2" value="3.9246081288997704E-56" />
+      <entry key="S5" value="1.3401237090805152E-22" />
+      <entry key="S10" value="2.4139395092453854E-11" />
+      <entry key="S30" value="8.750478292391307E-4" />
+      <entry key="S60" value="0.08192614101329117" />
+      <entry key="M2" value="0.9362761304565659" />
+      <entry key="M5" value="4.439198770757314" />
+      <entry key="M10" value="8.123526988456925" />
+      <entry key="M15" value="11.178011154398654" />
+      <entry key="M30" value="20.552642823297482" />
+      <entry key="H1" value="36.028269497479464" />
+      <entry key="H2" value="53.97837198834601" />
+      <entry key="H4" value="71.7451839611783" />
+      <entry key="D1" value="101.54234990027675" />
+      <entry key="W1" value="109.54335040888837" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.851214473620909E-7" />
-      <entry key="MS500" value="0.08390944691766408" />
-      <entry key="S2" value="0.9063986183261069" />
-      <entry key="S5" value="1.6491373111001837" />
-      <entry key="S10" value="2.9404454786853824" />
-      <entry key="S30" value="8.533651771398338" />
-      <entry key="S60" value="15.516214059297473" />
-      <entry key="M2" value="26.434884876851765" />
-      <entry key="M5" value="42.92304378018016" />
-      <entry key="M10" value="53.10306455555618" />
-      <entry key="M15" value="57.66108903084192" />
-      <entry key="M30" value="63.16081969157816" />
-      <entry key="H1" value="66.3805258507893" />
-      <entry key="H2" value="68.1353805790605" />
-      <entry key="H4" value="69.05329222403343" />
-      <entry key="D1" value="69.84015489548733" />
-      <entry key="W1" value="69.97711370949601" />
+      <entry key="MS100" value="0.6506709277209668" />
+      <entry key="MS500" value="0.9176405388127761" />
+      <entry key="S2" value="1.0268220731858895" />
+      <entry key="S5" value="1.4777619925783454" />
+      <entry key="S10" value="2.1362675236159556" />
+      <entry key="S30" value="3.1379410732361337" />
+      <entry key="S60" value="3.784434714982269" />
+      <entry key="M2" value="6.9393371800022745" />
+      <entry key="M5" value="19.571282655165852" />
+      <entry key="M10" value="32.867641927446016" />
+      <entry key="M15" value="44.01856141120726" />
+      <entry key="M30" value="78.06456093742325" />
+      <entry key="H1" value="131.5671203351404" />
+      <entry key="H2" value="190.9234216723213" />
+      <entry key="H4" value="248.3983212285371" />
+      <entry key="D1" value="344.44123327924115" />
+      <entry key="W1" value="370.2903388055556" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -105,44 +128,120 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build backend.executor": "Run",
-    "Gradle.backend::Users:valentinaoviedosanchez:Desktop:UniQuindio:Programación Avanzada:programacion-avanzada-2026-2:backend [:com.uniquindio.ecommerce.demo.DemoCompra.main()].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.EcommerceApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/valentinaoviedosanchez/Desktop/UniQuindio/Programación Avanzada/programacion-avanzada-2026-2/backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build backend.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backend::Users:valentinaoviedosanchez:Desktop:UniQuindio:Programación Avanzada:programacion-avanzada-2026-2:backend [:com.uniquindio.ecommerce.demo.DemoCompra.main()].executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CompraTest.noDebePermitirConfirmarUnaCompraYaReembolsada.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CompraTest.noDebePermitirReembolsarUnaCompraPendiente.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CompraTest.realizarCreaUnaCompraEnEstadoPendiente.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Modelo3DTest.dosModelosConLaMismaIdentidadSonElMismo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Modelo3DTest.eliminarLogicamenteDosVecesDebeLanzarExcepcion.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Modelo3DTest.publicarCreaUnModeloEnEstadoInicialCorrecto.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PrecioTest.conLicenciaDebeMultiplicarElMontoSegunElFactor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PrecioTest.dosPreciosConElMismoValorDebenSerIguales.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PrecioTest.noDebeCrearPrecioNegativo.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.EcommerceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/valentinaoviedosanchez/Desktop/UniQuindio/Programación Avanzada/programacion-avanzada-2026-2/backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.DemoCompra">
-    <configuration name="DemoCompra" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.uniquindio.ecommerce.demo.DemoCompra" />
-      <module name="ecommerce.main" />
+}</component>
+  <component name="RunManager" selected="JUnit.CompraTest.noDebePermitirConfirmarUnaCompraYaReembolsada">
+    <configuration name="CompraTest.noDebePermitirConfirmarUnaCompraYaReembolsada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ecommerce.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.uniquindio.ecommerce.demo.*" />
+          <option name="PATTERN" value="com.uniquindio.ecommerce.domain.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.uniquindio.ecommerce.domain.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.uniquindio.ecommerce.domain.entity.CompraTest" />
+      <option name="METHOD_NAME" value="noDebePermitirConfirmarUnaCompraYaReembolsada" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompraTest.noDebePermitirReembolsarUnaCompraPendiente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ecommerce.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.uniquindio.ecommerce.domain.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.uniquindio.ecommerce.domain.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.uniquindio.ecommerce.domain.entity.CompraTest" />
+      <option name="METHOD_NAME" value="noDebePermitirReembolsarUnaCompraPendiente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompraTest.realizarCreaUnaCompraEnEstadoPendiente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ecommerce.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.uniquindio.ecommerce.domain.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.uniquindio.ecommerce.domain.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.uniquindio.ecommerce.domain.entity.CompraTest" />
+      <option name="METHOD_NAME" value="realizarCreaUnaCompraEnEstadoPendiente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Modelo3DTest.dosModelosConLaMismaIdentidadSonElMismo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ecommerce.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.uniquindio.ecommerce.domain.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.uniquindio.ecommerce.domain.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.uniquindio.ecommerce.domain.entity.Modelo3DTest" />
+      <option name="METHOD_NAME" value="dosModelosConLaMismaIdentidadSonElMismo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Modelo3DTest.eliminarLogicamenteDosVecesDebeLanzarExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ecommerce.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.uniquindio.ecommerce.domain.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.uniquindio.ecommerce.domain.entity" />
+      <option name="MAIN_CLASS_NAME" value="com.uniquindio.ecommerce.domain.entity.Modelo3DTest" />
+      <option name="METHOD_NAME" value="eliminarLogicamenteDosVecesDebeLanzarExcepcion" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,7 +255,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DemoCompra" />
+        <item itemvalue="JUnit.CompraTest.noDebePermitirConfirmarUnaCompraYaReembolsada" />
+        <item itemvalue="JUnit.CompraTest.noDebePermitirReembolsarUnaCompraPendiente" />
+        <item itemvalue="JUnit.CompraTest.realizarCreaUnaCompraEnEstadoPendiente" />
+        <item itemvalue="JUnit.Modelo3DTest.eliminarLogicamenteDosVecesDebeLanzarExcepcion" />
+        <item itemvalue="JUnit.Modelo3DTest.dosModelosConLaMismaIdentidadSonElMismo" />
       </list>
     </recent_temporary>
   </component>
@@ -180,5 +283,25 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/valueobject/EstadoCompra.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/uniquindio/ecommerce/domain/entity/Modelo3DTest.java</url>
+          <line>10</line>
+          <properties class="com.uniquindio.ecommerce.domain.entity.Modelo3DTest" method="publicarCreaUnModeloEnEstadoInicialCorrecto">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,6 +1,7 @@
 package com.uniquindio.ecommerce.domain.entity;
 
 import com.uniquindio.ecommerce.domain.valueobject.Precio;
+import com.uniquindio.ecommerce.domain.exception.ReglaDominioException;
 import java.util.Objects;
 
 public class Modelo3D {
@@ -18,6 +19,17 @@ public class Modelo3D {
 
     public static Modelo3D publicar(String id, String titulo, Precio precio) {
         return new Modelo3D(id, titulo, precio);
+    }
+
+    public boolean estaEliminado() {
+        return this.eliminado;
+    }
+
+    public void eliminarLogicamente() {
+        if (this.eliminado) {
+            throw new ReglaDominioException("El modelo ya está eliminado");
+        }
+        this.eliminado = true;
     }
 
     // Sin setters — el comportamiento que cambie el estado se agrega en la Guía 05

@@ -94,6 +94,8 @@ public class Compra {
         return precioCongelado;
     }
 
+    public String getId() { return id; }
+
     // equals/hashCode por id: dos Compra son "la misma" solo si comparten id,
     // sin importar si el estado cambió con el tiempo (a diferencia de Precio,
     // que es un Value Object y compara TODOS sus campos).
