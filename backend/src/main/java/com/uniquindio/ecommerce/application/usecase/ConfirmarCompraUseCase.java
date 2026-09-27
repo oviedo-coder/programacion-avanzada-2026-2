@@ -2,25 +2,20 @@ package com.uniquindio.ecommerce.application.usecase;
 
 import com.uniquindio.ecommerce.domain.entity.Compra;
 import com.uniquindio.ecommerce.domain.repository.CompraRepository;
-import com.uniquindio.ecommerce.domain.valueobject.Precio;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RealizarCompraUseCase {
+public class ConfirmarCompraUseCase {
 
     private final CompraRepository repository;
 
-    public RealizarCompraUseCase(CompraRepository repository){
+    public ConfirmarCompraUseCase(CompraRepository repository) {
         this.repository = repository;
-
     }
 
-    public Compra ejecutar(String id, String modeloId, String compradorId, Precio precioActual){
-        Compra compra = Compra.realizar(id, modeloId, compradorId, precioActual);
+    public void ejecutar(String compraId) {
+        Compra compra = repository.obtenerPorId(compraId).orElseThrow();
+        compra.confirmar();
         repository.guardar(compra);
-        return compra;
     }
-
 }
-
-

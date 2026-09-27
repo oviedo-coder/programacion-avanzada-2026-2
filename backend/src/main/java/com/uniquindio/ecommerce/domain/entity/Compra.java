@@ -96,6 +96,12 @@ public class Compra {
 
     public String getId() { return id; }
 
+    public String getModeloId() {return modeloId;}
+
+    public String getCompradorId() {return compradorId;}
+
+    public LocalDateTime getFechaCompra() {return fechaCompra;}
+
     // equals/hashCode por id: dos Compra son "la misma" solo si comparten id,
     // sin importar si el estado cambió con el tiempo (a diferencia de Precio,
     // que es un Value Object y compara TODOS sus campos).

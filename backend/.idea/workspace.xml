@@ -5,30 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ca14a49-2dd5-4430-be09-488847dfbbe9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/usecase/RealizarCompraUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/repository/CompraRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/CompraRepositoryEnMemoria.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/uniquindio/ecommerce/domain/entity/CompraTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/uniquindio/ecommerce/domain/entity/Modelo3DTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/uniquindio/ecommerce/domain/valueobject/PrecioTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/api/mapeo-dominio-api.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/EcommerceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/dto/request/RealizarCompraRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/dto/request/SolicitarReembolsoRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/dto/response/CompraDetalleResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/usecase/CancelarCompraUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/usecase/ConfirmarCompraUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/CompraController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/mapper/CompraMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Compra.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/DemoCompra.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/EstadoCompra.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ConfirmarCompra.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/RealizarCompraUseCase.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/EcommerceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/demo/DemoCompra.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/CompraTest.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/CompraTest.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/usecase/RealizarCompraUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/usecase/RealizarCompraUseCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/entity/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/entity/Compra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/entity/Modelo3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/entity/Modelo3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/valueobject/EstadoCompra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/valueobject/EstadoCompra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/valueobject/Licencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/valueobject/Licencia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/repository/CompraRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/repository/CompraRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/CompraRepositoryEnMemoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/CompraRepositoryEnMemoria.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +40,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="30" />
+    <option name="cachedIndexableFilesCount" value="34" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -46,9 +50,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -63,60 +67,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.000000736514353" />
-      <entry key="S2" value="1.0499300287499886" />
-      <entry key="S5" value="1.508144292554983" />
-      <entry key="S10" value="2.1849044179086956" />
-      <entry key="S30" value="3.1779802686122913" />
-      <entry key="S60" value="3.7333092008937085" />
-      <entry key="M2" value="6.046026924047373" />
-      <entry key="M5" value="15.19196093053596" />
-      <entry key="M10" value="24.795590599327983" />
-      <entry key="M15" value="32.88622738083231" />
-      <entry key="M30" value="57.55184501533248" />
-      <entry key="H1" value="95.57270501274371" />
-      <entry key="H2" value="136.97000273654072" />
-      <entry key="H4" value="176.669674495018" />
-      <entry key="D1" value="242.9028143667092" />
-      <entry key="W1" value="260.74759588173083" />
+      <entry key="MS500" value="1.0000001721297735" />
+      <entry key="S2" value="1.020368732250331" />
+      <entry key="S5" value="1.2106617073757973" />
+      <entry key="S10" value="1.4589791255959899" />
+      <entry key="S30" value="1.7834176218423035" />
+      <entry key="S60" value="2.1400361072170515" />
+      <entry key="M2" value="4.061882033503563" />
+      <entry key="M5" value="16.218884575784514" />
+      <entry key="M10" value="36.70696713720585" />
+      <entry key="M15" value="51.395166289097666" />
+      <entry key="M30" value="74.88736335334359" />
+      <entry key="H1" value="91.88148209400376" />
+      <entry key="H2" value="103.7299489471752" />
+      <entry key="H4" value="134.36134134039028" />
+      <entry key="D1" value="425.38423286027705" />
+      <entry key="W1" value="597.9188255031921" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="6.4864315433268486E-223" />
-      <entry key="S2" value="3.9246081288997704E-56" />
-      <entry key="S5" value="1.3401237090805152E-22" />
-      <entry key="S10" value="2.4139395092453854E-11" />
-      <entry key="S30" value="8.750478292391307E-4" />
-      <entry key="S60" value="0.08192614101329117" />
-      <entry key="M2" value="0.9362761304565659" />
-      <entry key="M5" value="4.439198770757314" />
-      <entry key="M10" value="8.123526988456925" />
-      <entry key="M15" value="11.178011154398654" />
-      <entry key="M30" value="20.552642823297482" />
-      <entry key="H1" value="36.028269497479464" />
-      <entry key="H2" value="53.97837198834601" />
-      <entry key="H4" value="71.7451839611783" />
-      <entry key="D1" value="101.54234990027675" />
-      <entry key="W1" value="109.54335040888837" />
+      <entry key="MS100" value="1.2078013975196293E-245" />
+      <entry key="MS500" value="1.038482316219378E-49" />
+      <entry key="S2" value="5.676750101436538E-13" />
+      <entry key="S5" value="1.2636881429054963E-5" />
+      <entry key="S10" value="0.003554839156888261" />
+      <entry key="S30" value="0.15279195848987287" />
+      <entry key="S60" value="0.4299043627855174" />
+      <entry key="M2" value="1.3962173876162476" />
+      <entry key="M5" value="7.529879739992068" />
+      <entry key="M10" value="18.261794938658316" />
+      <entry key="M15" value="26.169111995807285" />
+      <entry key="M30" value="39.06658135244225" />
+      <entry key="H1" value="48.53613734437588" />
+      <entry key="H2" value="54.69899332931958" />
+      <entry key="H4" value="64.62789173060565" />
+      <entry key="D1" value="154.42193754008593" />
+      <entry key="W1" value="209.92693032411148" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.6506709277209668" />
-      <entry key="MS500" value="0.9176405388127761" />
-      <entry key="S2" value="1.0268220731858895" />
-      <entry key="S5" value="1.4777619925783454" />
-      <entry key="S10" value="2.1362675236159556" />
-      <entry key="S30" value="3.1379410732361337" />
-      <entry key="S60" value="3.784434714982269" />
-      <entry key="M2" value="6.9393371800022745" />
-      <entry key="M5" value="19.571282655165852" />
-      <entry key="M10" value="32.867641927446016" />
-      <entry key="M15" value="44.01856141120726" />
-      <entry key="M30" value="78.06456093742325" />
-      <entry key="H1" value="131.5671203351404" />
-      <entry key="H2" value="190.9234216723213" />
-      <entry key="H4" value="248.3983212285371" />
-      <entry key="D1" value="344.44123327924115" />
-      <entry key="W1" value="370.2903388055556" />
+      <entry key="MS100" value="1.8121625618030366E-4" />
+      <entry key="MS500" value="0.1785006681646093" />
+      <entry key="S2" value="0.6703211838847027" />
+      <entry key="S5" value="1.0522103877029376" />
+      <entry key="S10" value="1.3795552780951506" />
+      <entry key="S30" value="1.9036734260071766" />
+      <entry key="S60" value="2.5434052609103253" />
+      <entry key="M2" value="5.413355907911582" />
+      <entry key="M5" value="23.65009903385015" />
+      <entry key="M10" value="54.8488511630464" />
+      <entry key="M15" value="77.4493800916536" />
+      <entry key="M30" value="113.86776146340372" />
+      <entry key="H1" value="140.36391082128324" />
+      <entry key="H2" value="158.39867143001817" />
+      <entry key="H4" value="198.97173844447477" />
+      <entry key="D1" value="579.7999030612998" />
+      <entry key="W1" value="807.8445625495997" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -165,7 +169,7 @@
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.CompraTest.noDebePermitirConfirmarUnaCompraYaReembolsada">
+  <component name="RunManager" selected="Spring Boot.EcommerceApplication">
     <configuration name="CompraTest.noDebePermitirConfirmarUnaCompraYaReembolsada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ecommerce.test" />
       <extension name="coverage">
@@ -291,6 +295,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/valueobject/EstadoCompra.java</url>
           <line>5</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/usecase/RealizarCompraUseCase.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/com/uniquindio/ecommerce/domain/entity/Modelo3DTest.java</url>

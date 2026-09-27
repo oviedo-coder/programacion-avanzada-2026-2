@@ -5,7 +5,9 @@ import java.util.Map;
 import java.util.Optional;
 import com.uniquindio.ecommerce.domain.entity.Compra;
 import com.uniquindio.ecommerce.domain.repository.CompraRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class CompraRepositoryEnMemoria implements CompraRepository {
 
     private final Map<String, Compra> compras = new HashMap<>();
