@@ -10,6 +10,7 @@ public record RealizarCompraRequest(
         @NotBlank(message = "El comprador es obligatorio")
         String compradorId
 
+        //PEDIENDO USUARIO
+
 
 ) {}
-
