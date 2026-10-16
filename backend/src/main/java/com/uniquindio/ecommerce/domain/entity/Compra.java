@@ -17,6 +17,8 @@ import com.uniquindio.ecommerce.domain.valueobject.Precio;
  *  - solo se transita entre estados permitidos por el ciclo de vida;
  *  - una compra reembolsada no admite ninguna modificación.
  */
+
+
 public class Compra {
 
     private final String id;
@@ -27,14 +29,23 @@ public class Compra {
     private EstadoCompra estado;
 
     // Constructor privado: nadie crea una Compra sin pasar por realizar(...)
-    private Compra(String id, String modeloId, String compradorId, Precio precioCongelado) {
+    private Compra(String id, String modeloId, String compradorId, Precio precioCongelado,
+                    LocalDateTime fechaCompra, EstadoCompra estado) {
         this.id = id;
         this.modeloId = modeloId;
         this.compradorId = compradorId;
         this.precioCongelado = precioCongelado;
-        this.fechaCompra = LocalDateTime.now();
-        this.estado = EstadoCompra.PENDIENTE; // toda compra nace Pendiente, siempre
+        this.fechaCompra = fechaCompra;
+        this.estado = estado;
     }
+
+
+    // Constructor de una compra NUEVA: fecha de hoy y siempre PENDIENTE.
+        private Compra (String id, String modeloId, String compradorId, Precio precioCongelado){
+            this(id, modeloId, compradorId, precioCongelado, LocalDateTime.now(), EstadoCompra.PENDIENTE);
+
+        }
+
 
     // Único punto de entrada para crear una Compra: valida ANTES de existir
     public static Compra realizar(String id, String modeloId, String compradorId, Precio precioActualDelModelo) {
@@ -46,6 +57,18 @@ public class Compra {
         }
         return new Compra(id, modeloId, compradorId, precioActualDelModelo);
     }
+
+    /**
+     * Solo para el adaptador de persistencia: "revive" una compra que YA existía.
+     * NO valida: esos datos ya pasaron por realizar(...) cuando la compra nació.
+     */
+    public static Compra reconstruir (String id, String modeloId, String compradorId, Precio precioCongelado,
+                                      LocalDateTime fechaCompra, EstadoCompra estado){
+
+        return new Compra(id, modeloId, compradorId, precioCongelado, fechaCompra, estado);
+
+    }
+
 
     // ---------- Comportamiento del negocio ----------
     // Cada método valida PRIMERO, cambia el estado DESPUÉS — nunca al revés.

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.uniquindio.ecommerce.domain.entity.CompraTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-10T01:15:50.461Z" hostname="Valentinas-MacBook-Air.local" time="0.002">
+  <properties/>
+  <testcase name="noDebePermitirReembolsarUnaCompraPendiente()" classname="com.uniquindio.ecommerce.domain.entity.CompraTest" time="0.001"/>
+  <testcase name="realizarCreaUnaCompraEnEstadoPendiente()" classname="com.uniquindio.ecommerce.domain.entity.CompraTest" time="0.0"/>
+  <testcase name="noDebePermitirConfirmarUnaCompraYaReembolsada()" classname="com.uniquindio.ecommerce.domain.entity.CompraTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
