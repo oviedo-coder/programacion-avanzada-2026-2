@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-10T01:15:50.471Z" hostname="Valentinas-MacBook-Air.local" time="0.384">
+  <properties/>
+  <testcase name="deberiaCrearCompraCuandoDatosValidos()" classname="com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest" time="0.105"/>
+  <testcase name="deberiaRetornar400CuandoFaltaModeloId()" classname="com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest" time="0.009"/>
+  <system-out><![CDATA[2026-10-09T20:15:50.476-05:00  INFO 66835 --- [ecommerce] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest]: CompraControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-09T20:15:50.497-05:00  INFO 66835 --- [ecommerce] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.uniquindio.ecommerce.EcommerceApplication for test class com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest
+2026-10-09T20:15:50.498-05:00  INFO 66835 --- [ecommerce] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest]: CompraControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-09T20:15:50.504-05:00  INFO 66835 --- [ecommerce] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.uniquindio.ecommerce.EcommerceApplication for test class com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-09T20:15:50.530-05:00  INFO 66835 --- [ecommerce] [    Test worker] c.u.e.i.rest.CompraControllerTest        : Starting CompraControllerTest using Java 21.0.12 with PID 66835 (started by valentinaoviedosanchez in /Users/valentinaoviedosanchez/Desktop/UniQuindio/Programación Avanzada/programacion-avanzada-2026-2/backend)
+2026-10-09T20:15:50.530-05:00  INFO 66835 --- [ecommerce] [    Test worker] c.u.e.i.rest.CompraControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2026-10-09T20:15:50.725-05:00  INFO 66835 --- [ecommerce] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-09T20:15:50.725-05:00  INFO 66835 --- [ecommerce] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-09T20:15:50.726-05:00  INFO 66835 --- [ecommerce] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-10-09T20:15:50.735-05:00  INFO 66835 --- [ecommerce] [    Test worker] c.u.e.i.rest.CompraControllerTest        : Started CompraControllerTest in 0.227 seconds (process running for 2.501)
+2026-10-09T20:15:50.853-05:00  WARN 66835 --- [ecommerce] [    Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.uniquindio.ecommerce.application.dto.response.CompraDetalleResponse> com.uniquindio.ecommerce.infrastructure.rest.CompraController.crear(com.uniquindio.ecommerce.application.dto.request.RealizarCompraRequest): [Field error in object 'realizarCompraRequest' on field 'modeloId': rejected value [null]; codes [NotBlank.realizarCompraRequest.modeloId,NotBlank.modeloId,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [realizarCompraRequest.modeloId,modeloId]; arguments []; default message [modeloId]]; default message [El modelo es obligatorio]] ]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
