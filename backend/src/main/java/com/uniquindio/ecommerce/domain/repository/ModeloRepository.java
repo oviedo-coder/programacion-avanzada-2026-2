@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface ModeloRepository {
 
-    Optional<Modelo3D> obtenerPorId(String id);
+    Optional<Modelo3D> obtenerPorId(String id); //Cajita etiqueta No exista
 
     Pagina<Modelo3D> buscar(String texto, Licencia licencia, int pagina, int tamano);
 }

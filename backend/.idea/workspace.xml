@@ -5,14 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ca14a49-2dd5-4430-be09-488847dfbbe9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/dto/response/ModeloResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/dto/response/PageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/repository/ModeloRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/repository/Pagina.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/Modelo3DEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/mapper/ModeloPersistenceMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/usecase/ConsultarCatalogoUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ModeloJpaDataRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ModeloRepositoryJpa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/ModeloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/entity/Modelo3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/entity/Modelo3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Modelo3D.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/repository/ModeloRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/repository/ModeloRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/ComentarioEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/ComentarioEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,61 +84,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="4.060617221334935E-32" />
-      <entry key="MS500" value="5.268881251452756E-7" />
-      <entry key="S2" value="0.027082945151113823" />
-      <entry key="S5" value="0.2819339609551668" />
-      <entry key="S10" value="0.9168519907524563" />
-      <entry key="S30" value="3.9517485831592793" />
-      <entry key="S60" value="7.820881647800278" />
-      <entry key="M2" value="12.886898291327029" />
-      <entry key="M5" value="21.293115938894907" />
-      <entry key="M10" value="31.383584396892793" />
-      <entry key="M15" value="39.195419899730844" />
-      <entry key="M30" value="53.495200674024176" />
-      <entry key="H1" value="65.37696435671423" />
-      <entry key="H2" value="73.67271420537847" />
-      <entry key="H4" value="83.49051161913069" />
-      <entry key="D1" value="166.92434157425373" />
-      <entry key="W1" value="898.3331267953857" />
+      <entry key="MS100" value="1.8585654364377537" />
+      <entry key="MS500" value="1.9699619103453727" />
+      <entry key="S2" value="1.9946911741160038" />
+      <entry key="S5" value="2.1429929760144555" />
+      <entry key="S10" value="2.67586408616533" />
+      <entry key="S30" value="4.4062923864357" />
+      <entry key="S60" value="6.7637807195824955" />
+      <entry key="M2" value="11.727415693006247" />
+      <entry key="M5" value="25.74054986863267" />
+      <entry key="M10" value="47.985567533572215" />
+      <entry key="M15" value="68.07877367843865" />
+      <entry key="M30" value="109.54324111993303" />
+      <entry key="H1" value="152.7982786763111" />
+      <entry key="H2" value="195.06923992786005" />
+      <entry key="H4" value="232.91513500864806" />
+      <entry key="D1" value="349.38202560165115" />
+      <entry key="W1" value="1085.9508175977965" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0000000158603517" />
-      <entry key="MS500" value="1.0277831340092276" />
-      <entry key="S2" value="1.5860429262902396" />
-      <entry key="S5" value="2.670968993790704" />
-      <entry key="S10" value="4.224808467206776" />
-      <entry key="S30" value="9.137155103698365" />
-      <entry key="S60" value="15.272961356202314" />
-      <entry key="M2" value="24.549003759580884" />
-      <entry key="M5" value="38.09420137123823" />
-      <entry key="M10" value="49.203278850775334" />
-      <entry key="M15" value="56.77492184603396" />
-      <entry key="M30" value="70.1924797573196" />
-      <entry key="H1" value="81.14531873578554" />
-      <entry key="H2" value="88.53731876551927" />
-      <entry key="H4" value="95.53340402214847" />
-      <entry key="D1" value="146.20535404718987" />
-      <entry key="W1" value="559.6981842190726" />
+      <entry key="MS100" value="1.6858739404359845E-7" />
+      <entry key="MS500" value="0.04431503415396877" />
+      <entry key="S2" value="0.6375455446818625" />
+      <entry key="S5" value="1.8166319047607637" />
+      <entry key="S10" value="3.132100734242606" />
+      <entry key="S30" value="6.3377831514873835" />
+      <entry key="S60" value="10.255650972226821" />
+      <entry key="M2" value="16.588928244330603" />
+      <entry key="M5" value="31.272168840778953" />
+      <entry key="M10" value="49.28094888124756" />
+      <entry key="M15" value="62.30557087589935" />
+      <entry key="M30" value="85.66267291498761" />
+      <entry key="H1" value="112.14033041563792" />
+      <entry key="H2" value="144.40869564936062" />
+      <entry key="H4" value="176.15509073979314" />
+      <entry key="D1" value="258.9616722759024" />
+      <entry key="W1" value="678.6852919732428" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="4.0376002434932686E-7" />
-      <entry key="MS500" value="0.055949677702666005" />
-      <entry key="S2" value="0.8357081300959951" />
-      <entry key="S5" value="2.324627131701085" />
-      <entry key="S10" value="4.567322208157567" />
-      <entry key="S30" value="12.58784843680601" />
-      <entry key="S60" value="22.65109621219818" />
-      <entry key="M2" value="37.067304148565285" />
-      <entry key="M5" value="59.15141039882264" />
-      <entry key="M10" value="80.43165814645674" />
-      <entry key="M15" value="95.84978105710039" />
-      <entry key="M30" value="123.61214187973006" />
-      <entry key="H1" value="146.4782317141233" />
-      <entry key="H2" value="162.18585983068945" />
-      <entry key="H4" value="179.0107247765481" />
-      <entry key="D1" value="313.1260201797113" />
-      <entry key="W1" value="1458.0289212964237" />
+      <entry key="MS100" value="1.510597277600431" />
+      <entry key="MS500" value="1.8863552141001492" />
+      <entry key="S2" value="2.2479482790841008" />
+      <entry key="S5" value="3.48655848878497" />
+      <entry key="S10" value="5.376934446463365" />
+      <entry key="S30" value="10.435821641160903" />
+      <entry key="S60" value="16.762826463079453" />
+      <entry key="M2" value="28.091462968430733" />
+      <entry key="M5" value="56.82840967711838" />
+      <entry key="M10" value="97.11158920521136" />
+      <entry key="M15" value="130.24756660618806" />
+      <entry key="M30" value="195.10541319568165" />
+      <entry key="H1" value="264.8706305020961" />
+      <entry key="H2" value="339.4339490941436" />
+      <entry key="H4" value="409.0434598573383" />
+      <entry key="D1" value="608.3369933041779" />
+      <entry key="W1" value="1764.633268321928" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -175,7 +182,7 @@
     "Spring Boot.EcommerceApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "feature/persistencia-h2",
+    "git-widget-placeholder": "feature/consultas-catalogo",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/valentinaoviedosanchez/Desktop/UniQuindio/Programación Avanzada/programacion-avanzada-2026-2/backend",

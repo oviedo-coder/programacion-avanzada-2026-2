@@ -26,4 +26,5 @@ public class ComentarioEntity {
 
     @Column(nullable = false, length = 500)
     private String texto;
+
 }
