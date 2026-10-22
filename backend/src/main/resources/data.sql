@@ -1,3 +1,13 @@
+INSERT INTO modelos3d (id, titulo, precio_monto, precio_moneda, licencia, eliminado) VALUES
+                                                                                         ('casa-munecas',      'Casa modular de coleccion',      25000, 'COP', 'COMERCIAL', FALSE),
+                                                                                         ('engranaje-reloj',   'Engranaje de reloj mecanico',     8000, 'COP', 'PERSONAL',  FALSE),
+                                                                                         ('dragon-articulado', 'Dragon articulado',              30000, 'COP', 'ILIMITADA', FALSE),
+                                                                                         ('soporte-celular',   'Soporte de celular plegable',     5000, 'COP', 'PERSONAL',  FALSE),
+                                                                                         ('molde-anillo',      'Molde de anillo para joyeria',   12000, 'COP', 'COMERCIAL', FALSE),
+                                                                                         ('dragon-chino',      'Dragon chino de escritorio',     18000, 'COP', 'PERSONAL',  FALSE),
+                                                                                         ('llavero-engranaje', 'Llavero de engranaje',            3000, 'COP', 'PERSONAL',  FALSE),
+                                                                                         ('soporte-viejo',     'Soporte de monitor (descatalogado)', 9000, 'COP', 'PERSONAL', TRUE);
+
 INSERT INTO compras (id, comprador_id, modelo_id, precio_monto, precio_moneda, estado, fecha_compra) VALUES
                                                                                                          ('C-001', 'ana',   'casa-munecas',      25000, 'COP', 'COMPLETADA', '2026-09-01 10:00:00'),
                                                                                                          ('C-002', 'ana',   'engranaje-reloj',    8000, 'COP', 'COMPLETADA', '2026-09-03 11:30:00'),

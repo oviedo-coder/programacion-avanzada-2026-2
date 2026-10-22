@@ -45,7 +45,7 @@ class CompraControllerTest {
 
         // Doblete FALSO
         Compra compraSimulada = Compra.realizar("id-1", "modelo-1", "usuario-1", new Precio(15000, "COP"));
-        when(realizarCompraUseCase.ejecutar(any(), any(), any(), any()))
+        when(realizarCompraUseCase.ejecutar(any(), any(), any()))
                 .thenReturn(compraSimulada);
 
         // ACT & ASSERT
