@@ -11,4 +11,5 @@ interface CompraJpaDataRepository extends JpaRepository<CompraEntity, String> {
 
     boolean existsByCompradorIdAndModeloIdAndEstado(
             String compradorId, String modeloId, EstadoCompra estado);
+
 }

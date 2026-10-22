@@ -18,5 +18,4 @@ public class PrecioEmbeddable {
     @Column(name= "precio_moneda", nullable = false, length = 3)
     private String moneda;
 
-
 }

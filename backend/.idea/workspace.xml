@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ca14a49-2dd5-4430-be09-488847dfbbe9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/usecase/ConsultarCatalogoUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ModeloJpaDataRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ModeloRepositoryJpa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/ModeloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/dto/response/MasVendidoResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/repository/ModeloVentas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -16,10 +14,31 @@
       <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Modelo3D.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ComentarioEntity.class.uniqueId7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ComentarioJpaDataRepository.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ComentarioRepositoryJpa.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ConsultarCatalogoUseCase.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ModeloController.class.uniqueId1" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ModeloController.class.uniqueId1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ModeloJpaDataRepository.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ModeloRepository.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ModeloRepositoryJpa.class.uniqueId6" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/dto/request/RealizarCompraRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/dto/request/RealizarCompraRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/dto/response/PageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/dto/response/PageResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/usecase/ConsultarCatalogoUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/usecase/ConsultarCatalogoUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/usecase/RealizarCompraUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/usecase/RealizarCompraUseCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/repository/ModeloRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/repository/ModeloRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/ComentarioEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/ComentarioEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/repository/Pagina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/domain/repository/Pagina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/CompraJpaDataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/CompraJpaDataRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ModeloJpaDataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ModeloJpaDataRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ModeloRepositoryJpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/ModeloRepositoryJpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/PrecioEmbeddable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/PrecioEmbeddable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/CompraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/CompraController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/ConsultaComprasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/ConsultaComprasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/ModeloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/ModeloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/mapper/CompraMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/mapper/CompraMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/uniquindio/ecommerce/infrastructure/rest/CompraControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/uniquindio/ecommerce/infrastructure/rest/CompraControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +46,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="59" />
+    <option name="cachedIndexableFilesCount" value="71" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -69,9 +88,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Record" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -84,61 +103,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.8585654364377537" />
-      <entry key="MS500" value="1.9699619103453727" />
-      <entry key="S2" value="1.9946911741160038" />
-      <entry key="S5" value="2.1429929760144555" />
-      <entry key="S10" value="2.67586408616533" />
-      <entry key="S30" value="4.4062923864357" />
-      <entry key="S60" value="6.7637807195824955" />
-      <entry key="M2" value="11.727415693006247" />
-      <entry key="M5" value="25.74054986863267" />
-      <entry key="M10" value="47.985567533572215" />
-      <entry key="M15" value="68.07877367843865" />
-      <entry key="M30" value="109.54324111993303" />
-      <entry key="H1" value="152.7982786763111" />
-      <entry key="H2" value="195.06923992786005" />
-      <entry key="H4" value="232.91513500864806" />
-      <entry key="D1" value="349.38202560165115" />
-      <entry key="W1" value="1085.9508175977965" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0000323471918762" />
+      <entry key="S5" value="1.0159931729553233" />
+      <entry key="S10" value="1.1264641172638439" />
+      <entry key="S30" value="1.5019445837356349" />
+      <entry key="S60" value="1.7084804751971892" />
+      <entry key="M2" value="1.8417128222839363" />
+      <entry key="M5" value="1.9333952301809476" />
+      <entry key="M10" value="1.9661238172102724" />
+      <entry key="M15" value="1.977286408873695" />
+      <entry key="M30" value="1.988577973087452" />
+      <entry key="H1" value="1.9942726371205204" />
+      <entry key="H2" value="2.0002272834264017" />
+      <entry key="H4" value="2.7544797934991943" />
+      <entry key="D1" value="99.90302080927245" />
+      <entry key="W1" value="904.7653539958534" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.6858739404359845E-7" />
-      <entry key="MS500" value="0.04431503415396877" />
-      <entry key="S2" value="0.6375455446818625" />
-      <entry key="S5" value="1.8166319047607637" />
-      <entry key="S10" value="3.132100734242606" />
-      <entry key="S30" value="6.3377831514873835" />
-      <entry key="S60" value="10.255650972226821" />
-      <entry key="M2" value="16.588928244330603" />
-      <entry key="M5" value="31.272168840778953" />
-      <entry key="M10" value="49.28094888124756" />
-      <entry key="M15" value="62.30557087589935" />
-      <entry key="M30" value="85.66267291498761" />
-      <entry key="H1" value="112.14033041563792" />
-      <entry key="H2" value="144.40869564936062" />
-      <entry key="H4" value="176.15509073979314" />
-      <entry key="D1" value="258.9616722759024" />
-      <entry key="W1" value="678.6852919732428" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="1.0512090667115813E-282" />
+      <entry key="M5" value="1.600746522333183E-112" />
+      <entry key="M10" value="1.0633158577224637E-55" />
+      <entry key="M15" value="9.957977328391123E-37" />
+      <entry key="M30" value="9.871254262461672E-18" />
+      <entry key="H1" value="3.188909992978364E-8" />
+      <entry key="H2" value="0.001825371741936856" />
+      <entry key="H4" value="0.4375415656598382" />
+      <entry key="D1" value="59.86452049138459" />
+      <entry key="W1" value="554.9286438835329" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.510597277600431" />
-      <entry key="MS500" value="1.8863552141001492" />
-      <entry key="S2" value="2.2479482790841008" />
-      <entry key="S5" value="3.48655848878497" />
-      <entry key="S10" value="5.376934446463365" />
-      <entry key="S30" value="10.435821641160903" />
-      <entry key="S60" value="16.762826463079453" />
-      <entry key="M2" value="28.091462968430733" />
-      <entry key="M5" value="56.82840967711838" />
-      <entry key="M10" value="97.11158920521136" />
-      <entry key="M15" value="130.24756660618806" />
-      <entry key="M30" value="195.10541319568165" />
-      <entry key="H1" value="264.8706305020961" />
-      <entry key="H2" value="339.4339490941436" />
-      <entry key="H4" value="409.0434598573383" />
-      <entry key="D1" value="608.3369933041779" />
-      <entry key="W1" value="1764.633268321928" />
+      <entry key="MS100" value="0.9526379980439373" />
+      <entry key="MS500" value="0.9903428719330246" />
+      <entry key="S2" value="0.9975998299137695" />
+      <entry key="S5" value="1.0129606529811168" />
+      <entry key="S10" value="1.1175428280683377" />
+      <entry key="S30" value="1.4903637644211831" />
+      <entry key="S60" value="1.7002943824380286" />
+      <entry key="M2" value="1.8368438163006835" />
+      <entry key="M5" value="1.9312335519909303" />
+      <entry key="M10" value="1.9650047242638984" />
+      <entry key="M15" value="1.9765316455226078" />
+      <entry key="M30" value="1.988196189602065" />
+      <entry key="H1" value="1.99408066711858" />
+      <entry key="H2" value="2.0019558538070035" />
+      <entry key="H4" value="3.191909937581655" />
+      <entry key="D1" value="159.76605014796075" />
+      <entry key="W1" value="1459.6917388894008" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -150,52 +169,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build backend.executor": "Run",
-    "Gradle.backend::Users:valentinaoviedosanchez:Desktop:UniQuindio:Programación Avanzada:programacion-avanzada-2026-2:backend [:com.uniquindio.ecommerce.demo.DemoCompra.main()].executor": "Run",
-    "Gradle.backend::Users:valentinaoviedosanchez:Desktop:UniQuindio:Programación Avanzada:programacion-avanzada-2026-2:backend [bootJar].executor": "Run",
-    "Gradle.backend::Users:valentinaoviedosanchez:Desktop:UniQuindio:Programación Avanzada:programacion-avanzada-2026-2:backend [test].executor": "Run",
-    "JUnit.CompraControllerTest.deberiaCrearCompraCuandoDatosValidos.executor": "Run",
-    "JUnit.CompraControllerTest.deberiaRetornar400CuandoFaltaModeloId.executor": "Run",
-    "JUnit.CompraControllerTest.executor": "Run",
-    "JUnit.CompraTest.executor": "Run",
-    "JUnit.CompraTest.noDebePermitirConfirmarUnaCompraYaReembolsada.executor": "Run",
-    "JUnit.CompraTest.noDebePermitirReembolsarUnaCompraPendiente.executor": "Run",
-    "JUnit.CompraTest.realizarCreaUnaCompraEnEstadoPendiente.executor": "Run",
-    "JUnit.ConfirmarCompraUseCaseTest.executor": "Run",
-    "JUnit.Modelo3DTest.dosModelosConLaMismaIdentidadSonElMismo.executor": "Run",
-    "JUnit.Modelo3DTest.eliminarLogicamenteDosVecesDebeLanzarExcepcion.executor": "Run",
-    "JUnit.Modelo3DTest.publicarCreaUnModeloEnEstadoInicialCorrecto.executor": "Run",
-    "JUnit.PrecioTest.conLicenciaDebeMultiplicarElMontoSegunElFactor.executor": "Run",
-    "JUnit.PrecioTest.dosPreciosConElMismoValorDebenSerIguales.executor": "Run",
-    "JUnit.PrecioTest.noDebeCrearPrecioNegativo.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.EcommerceApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "feature/consultas-catalogo",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/valentinaoviedosanchez/Desktop/UniQuindio/Programación Avanzada/programacion-avanzada-2026-2/backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.jshint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.jshint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build backend.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backend::Users:valentinaoviedosanchez:Desktop:UniQuindio:Programación Avanzada:programacion-avanzada-2026-2:backend [:com.uniquindio.ecommerce.demo.DemoCompra.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backend::Users:valentinaoviedosanchez:Desktop:UniQuindio:Programación Avanzada:programacion-avanzada-2026-2:backend [bootJar].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.backend::Users:valentinaoviedosanchez:Desktop:UniQuindio:Programación Avanzada:programacion-avanzada-2026-2:backend [test].executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CompraControllerTest.deberiaCrearCompraCuandoDatosValidos.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CompraControllerTest.deberiaRetornar400CuandoFaltaModeloId.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CompraControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CompraTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CompraTest.noDebePermitirConfirmarUnaCompraYaReembolsada.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CompraTest.noDebePermitirReembolsarUnaCompraPendiente.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CompraTest.realizarCreaUnaCompraEnEstadoPendiente.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConfirmarCompraUseCaseTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Modelo3DTest.dosModelosConLaMismaIdentidadSonElMismo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Modelo3DTest.eliminarLogicamenteDosVecesDebeLanzarExcepcion.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Modelo3DTest.publicarCreaUnModeloEnEstadoInicialCorrecto.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PrecioTest.conLicenciaDebeMultiplicarElMontoSegunElFactor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PrecioTest.dosPreciosConElMismoValorDebenSerIguales.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PrecioTest.noDebeCrearPrecioNegativo.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.EcommerceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/consultas-catalogo&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/valentinaoviedosanchez/Desktop/UniQuindio/Programación Avanzada/programacion-avanzada-2026-2/backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Spring Boot.EcommerceApplication">
     <configuration name="backend::Users:valentinaoviedosanchez:Desktop:UniQuindio:Programación Avanzada:programacion-avanzada-2026-2:backend [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>

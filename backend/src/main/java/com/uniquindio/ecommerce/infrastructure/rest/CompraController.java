@@ -35,8 +35,7 @@ public class CompraController {
 
     @PostMapping
     public ResponseEntity<CompraDetalleResponse> crear (@Valid @RequestBody RealizarCompraRequest request){
-        Precio precioActual = new Precio(15000, "COP");
-        Compra compra = realizarCompraUseCase.ejecutar(UUID.randomUUID().toString(), request.modeloId(), request.compradorId(), precioActual);
+        Compra compra = realizarCompraUseCase.ejecutar(UUID.randomUUID().toString(), request.modeloId(), request.compradorId());
 
         CompraDetalleResponse response = mapper.toDetalleResponse(compra);
 

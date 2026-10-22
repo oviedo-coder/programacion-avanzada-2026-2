@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
+@RestController // esta clase maneja peticiones HTTP
 @RequestMapping("/api/compras")
 @RequiredArgsConstructor
 public class ConsultaComprasController {
@@ -20,7 +20,7 @@ public class ConsultaComprasController {
     private final ListarComprasUseCase listarComprasUseCase;
     private final CompraMapper mapper;
 
-    @GetMapping
+    @GetMapping // GET / api/compras
     public List<CompraDetalleResponse> listarPorComprador(
             @RequestParam("compradorId") String compradorId) {
         return listarComprasUseCase.ejecutar(compradorId).stream()
