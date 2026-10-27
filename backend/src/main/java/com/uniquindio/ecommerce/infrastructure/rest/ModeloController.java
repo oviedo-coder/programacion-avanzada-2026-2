@@ -28,6 +28,7 @@ public class ModeloController {
                 consultarCatalogoUseCase.buscar(busqueda,licencia, page, size),
                 ModeloResponse::desde);
     }
+// 1 - 2 -
 
     @GetMapping("/mas-vendidos")
     public List<MasVendidoResponse> masVendidos(@RequestParam(name = "limite", defaultValue = "3") int limite) {
@@ -36,6 +37,8 @@ public class ModeloController {
                 .toList();
     }
 
+
+    // GET/api modelos / masvendidos
     @GetMapping("{id}")//casa-munecas
     public ModeloResponse obtener (@PathVariable("id") String id){
         return  ModeloResponse.desde(consultarCatalogoUseCase.obtener(id)); //404

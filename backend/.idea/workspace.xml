@@ -5,7 +5,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ca14a49-2dd5-4430-be09-488847dfbbe9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/dto/request/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/dto/response/TokenResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/config/OpenApiConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/UsuarioJpaDataRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/RolSeguridad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/UsuarioEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/security/AutenticacionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/security/CustomUserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/security/JwtConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/security/JwtTokenProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/security/UserConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/security/UsuariosIniciales.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.EcommerceApplicationTests/contextLoads().html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.EcommerceApplicationTests/contextLoads().html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.EcommerceApplicationTests/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.EcommerceApplicationTests/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.application.usecase.ConfirmarCompraUseCaseTest/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.application.usecase.ConfirmarCompraUseCaseTest/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.domain.entity.CompraTest/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.domain.entity.CompraTest/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.domain.entity.Modelo3DTest/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.domain.entity.Modelo3DTest/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.domain.valueobject.PrecioTest/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.domain.valueobject.PrecioTest/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest/deberiaRetornar400CuandoFaltaModeloId().html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest/deberiaRetornar400CuandoFaltaModeloId().html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resolvedMainClassName" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.EcommerceApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.EcommerceApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.application.usecase.ConfirmarCompraUseCaseTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.application.usecase.ConfirmarCompraUseCaseTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.domain.entity.CompraTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.domain.entity.CompraTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.domain.entity.Modelo3DTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.domain.entity.Modelo3DTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.domain.valueobject.PrecioTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.domain.valueobject.PrecioTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output-events.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output-events.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results-generic.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results-generic.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/bootJar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ModeloJpaDataRepository.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ModeloRepositoryJpa.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/CompraControllerTest.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/CompraTest.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/ConfirmarCompraUseCaseTest.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/usecase/ConsultarCatalogoUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/usecase/ConsultarCatalogoUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/ModeloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/ModeloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/uniquindio/ecommerce/infrastructure/rest/CompraControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/uniquindio/ecommerce/infrastructure/rest/CompraControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +69,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="71" />
+    <option name="cachedIndexableFilesCount" value="85" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -56,8 +112,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -70,23 +126,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.9201876506248752" />
-      <entry key="MS500" value="1.9835020740262483" />
-      <entry key="S2" value="1.9958819660375013" />
-      <entry key="S5" value="2.0143044192826705" />
-      <entry key="S10" value="2.125527540316984" />
-      <entry key="S30" value="2.5015282139979744" />
-      <entry key="S60" value="2.7082436459284374" />
-      <entry key="M2" value="2.8415851689030998" />
-      <entry key="M5" value="2.933341625825957" />
-      <entry key="M10" value="2.966096561135587" />
-      <entry key="M15" value="2.977268134951479" />
-      <entry key="M30" value="2.9885687839272475" />
-      <entry key="H1" value="2.994268029377658" />
-      <entry key="H2" value="3.0002249726745664" />
-      <entry key="H4" value="3.754478202449735" />
-      <entry key="D1" value="100.90301119156497" />
-      <entry key="W1" value="905.7653415526877" />
+      <entry key="MS100" value="1.7001899170789099" />
+      <entry key="MS500" value="3.4892457957229075" />
+      <entry key="S2" value="6.480385198982863" />
+      <entry key="S5" value="8.616960893744356" />
+      <entry key="S10" value="9.679695403670951" />
+      <entry key="S30" value="10.527259908816765" />
+      <entry key="S60" value="10.759268720392924" />
+      <entry key="M2" value="10.878521698414458" />
+      <entry key="M5" value="10.951138724422833" />
+      <entry key="M10" value="10.975524124386284" />
+      <entry key="M15" value="10.983672678484298" />
+      <entry key="M30" value="10.991831299116667" />
+      <entry key="H1" value="10.995914388668917" />
+      <entry key="H2" value="10.99795687900508" />
+      <entry key="H4" value="10.998983294084637" />
+      <entry key="D1" value="20.53472223985875" />
+      <entry key="W1" value="645.6174108836623" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -96,35 +152,35 @@
       <entry key="S10" value="0.0" />
       <entry key="S30" value="0.0" />
       <entry key="S60" value="0.0" />
-      <entry key="M2" value="1.0511362049767288E-282" />
-      <entry key="M5" value="1.6007021408308943E-112" />
-      <entry key="M10" value="1.0633011171368614E-55" />
-      <entry key="M15" value="9.957885297564273E-37" />
-      <entry key="M30" value="9.87120864768666E-18" />
-      <entry key="H1" value="3.188902625040307E-8" />
-      <entry key="H2" value="0.001825369633185947" />
-      <entry key="H4" value="0.43754131292599235" />
-      <entry key="D1" value="59.86451472820104" />
-      <entry key="W1" value="554.9286362516436" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="3.3844943958572E-172" />
+      <entry key="M15" value="1.7815320602461263E-114" />
+      <entry key="M30" value="9.738242890188515E-57" />
+      <entry key="H1" value="7.290869774672196E-28" />
+      <entry key="H2" value="2.00067423817665E-13" />
+      <entry key="H4" value="3.319702795011455E-6" />
+      <entry key="D1" value="6.0895971609757185" />
+      <entry key="W1" value="392.4206691905714" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.7967933719409102" />
-      <entry key="MS500" value="1.9575063425694892" />
-      <entry key="S2" value="1.9893092974011588" />
-      <entry key="S5" value="2.0096147695774524" />
-      <entry key="S10" value="2.115782237769576" />
-      <entry key="S30" value="2.4896733846838086" />
-      <entry key="S60" value="2.699920068096547" />
-      <entry key="M2" value="2.836647188086081" />
-      <entry key="M5" value="2.9311522820666904" />
-      <entry key="M10" value="2.9649636208555066" />
-      <entry key="M15" value="2.9765041366561533" />
-      <entry key="M30" value="2.988182381235544" />
-      <entry key="H1" value="2.9940737493313296" />
-      <entry key="H2" value="3.001952385813613" />
-      <entry key="H4" value="4.191907516240225" />
-      <entry key="D1" value="160.76603467094284" />
-      <entry key="W1" value="1460.691718800624" />
+      <entry key="MS100" value="1.6157234244244896" />
+      <entry key="MS500" value="3.4326516775224643" />
+      <entry key="S2" value="6.454502106156831" />
+      <entry key="S5" value="8.603409818259761" />
+      <entry key="S10" value="9.67211320340517" />
+      <entry key="S30" value="10.524516217244473" />
+      <entry key="S60" value="10.75786713452989" />
+      <entry key="M2" value="10.877813251151343" />
+      <entry key="M5" value="10.950853479667478" />
+      <entry key="M10" value="10.975381188601279" />
+      <entry key="M15" value="10.983577318133584" />
+      <entry key="M30" value="10.991783583982183" />
+      <entry key="H1" value="10.995890522353365" />
+      <entry key="H2" value="10.997944943659357" />
+      <entry key="H4" value="10.998980644795331" />
+      <entry key="D1" value="26.624119207342925" />
+      <entry key="W1" value="1038.036428521647" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -168,7 +224,7 @@
     &quot;Spring Boot.EcommerceApplication.executor&quot;: &quot;Run&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/consultas-catalogo&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/seguridad-jwt&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/valentinaoviedosanchez/Desktop/UniQuindio/Programación Avanzada/programacion-avanzada-2026-2/backend&quot;,
@@ -327,12 +383,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/uniquindio/ecommerce/infrastructure/rest/CompraControllerTest.java</url>
-          <line>54</line>
+          <line>56</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/uniquindio/ecommerce/infrastructure/rest/CompraControllerTest.java</url>
-          <line>21</line>
+          <line>23</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="NONE" type="java-line">

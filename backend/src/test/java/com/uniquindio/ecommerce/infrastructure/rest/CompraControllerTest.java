@@ -17,8 +17,10 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 
 @WebMvcTest(CompraController.class)// levanta lo necesario para probar este controller
+@AutoConfigureMockMvc(addFilters = false)
 class CompraControllerTest {
 
     @Autowired // Postman Interno
