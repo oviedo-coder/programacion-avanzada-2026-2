@@ -16,8 +16,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ConsultarCatalogoUseCase {
 
-    private static final int TAMANO_MAXIMO = 50;
-    private static final int RANKING_MAXIMO = 20;
+    private static final int TAMANO_MAXIMO = 50;   // 10000
+    private static final int RANKING_MAXIMO = 20; //3000000
 
     private final ModeloRepository repository;
 

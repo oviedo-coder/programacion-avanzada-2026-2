@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.uniquindio.ecommerce.application.usecase.ConfirmarCompraUseCaseTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-10T01:15:50.370Z" hostname="Valentinas-MacBook-Air.local" time="0.09">
+<testsuite name="com.uniquindio.ecommerce.application.usecase.ConfirmarCompraUseCaseTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-27T17:56:44.625Z" hostname="Valentinas-MacBook-Air.local" time="0.069">
   <properties/>
-  <testcase name="deberiaLanzarExcepcionCuandoLaCompraNoExiste()" classname="com.uniquindio.ecommerce.application.usecase.ConfirmarCompraUseCaseTest" time="0.088"/>
+  <testcase name="deberiaLanzarExcepcionCuandoLaCompraNoExiste()" classname="com.uniquindio.ecommerce.application.usecase.ConfirmarCompraUseCaseTest" time="0.067"/>
   <testcase name="deberiaConfirmarCompraCuandoLaCompraExiste()" classname="com.uniquindio.ecommerce.application.usecase.ConfirmarCompraUseCaseTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
