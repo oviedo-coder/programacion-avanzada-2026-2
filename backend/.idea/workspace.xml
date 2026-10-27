@@ -4,65 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ca14a49-2dd5-4430-be09-488847dfbbe9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/dto/request/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/dto/response/TokenResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/config/OpenApiConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/UsuarioJpaDataRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/RolSeguridad.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/persistence/jpa/entity/UsuarioEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/security/AutenticacionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/security/CustomUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/security/JwtConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/security/JwtTokenProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/security/UserConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/security/UsuariosIniciales.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.7.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.EcommerceApplicationTests/contextLoads().html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.EcommerceApplicationTests/contextLoads().html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.EcommerceApplicationTests/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.EcommerceApplicationTests/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.application.usecase.ConfirmarCompraUseCaseTest/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.application.usecase.ConfirmarCompraUseCaseTest/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.domain.entity.CompraTest/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.domain.entity.CompraTest/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.domain.entity.Modelo3DTest/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.domain.entity.Modelo3DTest/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.domain.valueobject.PrecioTest/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.domain.valueobject.PrecioTest/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest/deberiaRetornar400CuandoFaltaModeloId().html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest/deberiaRetornar400CuandoFaltaModeloId().html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resolvedMainClassName" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.EcommerceApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.EcommerceApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.application.usecase.ConfirmarCompraUseCaseTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.application.usecase.ConfirmarCompraUseCaseTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.domain.entity.CompraTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.domain.entity.CompraTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.domain.entity.Modelo3DTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.domain.entity.Modelo3DTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.domain.valueobject.PrecioTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.domain.valueobject.PrecioTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.uniquindio.ecommerce.infrastructure.rest.CompraControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output-events.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output-events.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results-generic.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results-generic.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/bootJar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ModeloJpaDataRepository.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ModeloRepositoryJpa.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/CompraControllerTest.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/CompraTest.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/ConfirmarCompraUseCaseTest.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/usecase/ConsultarCatalogoUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/application/usecase/ConsultarCatalogoUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/ModeloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/uniquindio/ecommerce/infrastructure/rest/ModeloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/uniquindio/ecommerce/infrastructure/rest/CompraControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/uniquindio/ecommerce/infrastructure/rest/CompraControllerTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="9ca14a49-2dd5-4430-be09-488847dfbbe9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
